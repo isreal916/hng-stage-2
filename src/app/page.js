@@ -232,12 +232,62 @@ export default function Home() {
 
       </section>
       <section className="new-product bg-[#F0F0F0] p-[7px] content-center flex justify-around">
-        <Image src={'/image.png'} width={400} height={400}  className="self-center"/>
+        <Image src={'/image.png'} width={400} height={400} className="self-center" />
         <div className="new-product-desc space-y-4">
           <p className="font-black">NEW PRODUCT</p>
           <h1 className="font-black text-[45px]">AXEL- STOOL</h1>
           <p className="w-[500px]">A sleek and versatile addition to contemporary interiors. Crafted from sustainably sourced ash wood, its minimalist design exudes elegance and functionality. The AXEL Stool features a gently machined seat for optimal comfort, supported by sturdy yet slim tapered legs that provide stability without compromising on style.</p>
           <button className="bg-[#353638] text-[#FFFFFF] p-[5px]">SHOP NOW</button>
+        </div>
+      </section>
+      <section className="offer flex flex-col space-y-3 ">
+        <div className="offer-pag flex justify-between">
+          <p className="font-black">OFFERS</p>
+          <div className="pagination flex space-x-2">
+            <span className="border-2 border-solid border-[#909090] p-[3px]"><svg width="18" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.09736 2.63036C9.63037 2.09737 9.63037 1.2332 9.09736 0.700214C8.56437 0.16721 7.70022 0.16721 7.16721 0.700214L0.799494 7.06787C-0.266497 8.13393 -0.266499 9.86221 0.799494 10.9283L7.17109 17.2998C7.70408 17.8328 8.56825 17.8328 9.10124 17.2998C9.63424 16.7668 9.63424 15.9026 9.10124 15.3697L4.09775 10.3661H28.6352C29.389 10.3661 30 9.75507 30 9.00127C30 8.24762 29.389 7.63645 28.6352 7.63645H4.09122L9.09736 2.63036Z" fill="#909090" />
+            </svg>
+            </span>
+            <span className="border-2 border-solid border-[#909090] p-[3px] "><svg width="18" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.9026 15.3696C20.3696 15.9026 20.3696 16.7668 20.9026 17.2998C21.4356 17.8328 22.2998 17.8328 22.8328 17.2998L29.2005 10.9321C30.2665 9.86607 30.2665 8.13779 29.2005 7.07173L22.8289 0.700188C22.2959 0.167225 21.4318 0.167225 20.8988 0.700188C20.3658 1.23315 20.3658 2.09736 20.8988 2.63032L25.9022 7.6339H1.36482C0.611031 7.6339 0 8.24493 0 8.99872C0 9.75238 0.611031 10.3635 1.36482 10.3635H25.9088L20.9026 15.3696Z" fill="#909090" />
+            </svg>
+            </span>
+          </div>
+        </div>
+        <div className="offer-product flex justify-around">
+          <div className="img1  w-[45%]">
+            <div className="banner bg-[#D8474C] text-white w-[300px] z-[40] flex flex-wrap p-[5px] justify-around absolute ">
+              <p className="text-[50px] font-bold">20%</p>
+              <div className="banner-desc">
+                <p>FREE SHIPPING 100KM</p>
+                <p>12 MONTH WARRANTY</p>
+                <p>3 DAY TRIAL</p>
+              </div>
+              <p className="font-bold text-[25px]">FOR HNG PREMIUM </p>
+            </div>
+            <Image src={'/img/waterchair.png'} width={600} height={40} className="s" />
+          </div>
+          <div className="img2 w-[25%] bg-[url('/img/sofa-show.jpg')] bg-no-repeat bg-cover text-white">
+            <div>
+              <p className="text-[40px]">LIVING ROOM</p>
+              <p className="font-bold text-[40px]">FURNITURE</p>
+              <p className="text-[#D8474C] text-[70px] " style={{ textShadow: '-1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white' }}>-40%</p>
+              <button className="bg-[#222222] text-white flex p-[5px]">BUY NOW <span><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.96912 6.73999C10.2891 6.73999 11.3691 7.80799 11.3691 9.13999C11.3691 9.58399 11.2371 9.99199 11.0331 10.34C11.0331 10.34 10.1691 10.1 8.96912 10.1C7.76912 10.1 6.90512 10.34 6.90512 10.34C6.70112 9.99199 6.56912 9.58399 6.56912 9.13999C6.56912 7.80799 7.64912 6.73999 8.96912 6.73999ZM16.1691 6.73999C17.5011 6.73999 18.5691 7.80799 18.5691 9.13999C18.5691 9.58399 18.4371 9.99199 18.2331 10.34C18.2331 10.34 17.3691 10.1 16.1691 10.1C14.9691 10.1 14.1051 10.34 14.1051 10.34C13.9011 9.99199 13.7691 9.58399 13.7691 9.13999C13.7691 7.80799 14.8371 6.73999 16.1691 6.73999ZM12.5691 23.18C17.0331 23.18 21.0051 20.348 22.4451 16.124L20.8611 15.572C19.6491 19.124 16.3131 21.5 12.5691 21.5C8.82512 21.5 5.48912 19.124 4.27712 15.572L2.69312 16.124C4.13312 20.348 8.10511 23.18 12.5691 23.18Z" fill="white" />
+              </svg>
+              </span>
+              </button>
+            </div>
+
+          </div>
+          <div className="img3 w-[25%] bg-[url('/img/OUTDOOR.jpeg')] bg-no-repeat bg-cover  text-white flex justify-center">
+          <div className=" mt-[25px]">
+            <p className="text-[35px]">OUTDOOR</p>
+          <p className="text-[35px] font-bold">FURNITURE</p>
+          <p>Free delivery on weekends</p>
+          </div>
+          </div>
+
         </div>
       </section>
     </div>
