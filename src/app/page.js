@@ -4,7 +4,7 @@ import couchimage from "../../public/img/couch-image-free-transparent-image-hq.p
 import sofashow from "../../public/img/sofa-show.jpg";
 import sofa from "../../public/img/sofa.png";
 import kede from "../../public/img/image.png";
-import { data,gadget } from "@/data";
+import { data, gadget } from "@/data";
 export default function Home() {
   return (
     <div className="space-y-5 ">
@@ -309,28 +309,121 @@ export default function Home() {
 
             return (
               <div className="gadget-product-itm flex space-x-3 mt-[10px]" key={data.name}>
-            <div className="border-2 border-solid h-[200px] w-[160px]  "> 
-             <Image src={data.img} width={120} height={200} className="m-[20px]" />
-             </div>
+                <div className="border-2 border-solid h-[200px] w-[160px]  ">
+                  <Image src={data.img} width={120} height={200} className="m-[20px]" />
+                </div>
 
-            <div className="gadget-des space-y-3">
-              <p className="text-[#909090]">{data.name}</p>
-              <p className="font-black text-[#C16C4F]">{data.price}</p>
-              <button className="flex justify-between ">
-                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.0841616 1.2512C0.221552 0.860438 0.649701 0.655028 1.04047 0.792418L1.34187 0.898378C1.95839 1.11511 2.48203 1.29919 2.89411 1.50139C3.33474 1.71759 3.71259 1.98393 3.99677 2.39979C4.27875 2.81243 4.39517 3.26515 4.4489 3.76153C4.47295 3.98373 4.48564 4.22967 4.49233 4.5H15.1305C16.8155 4.5 18.3323 4.5 18.7762 5.07708C19.2202 5.65417 19.0466 6.52369 18.6995 8.26275L18.1997 10.6875C17.8846 12.2164 17.727 12.9808 17.1753 13.4304C16.6236 13.88 15.8431 13.88 14.2821 13.88H8.9792C6.19028 13.88 4.79583 13.88 3.92943 12.9662C3.06302 12.0523 2.99979 11.0816 2.99979 8.14V5.53832C2.99979 4.79837 2.99877 4.30316 2.95761 3.92295C2.91828 3.5596 2.84858 3.37818 2.75832 3.24609C2.67026 3.11723 2.53659 2.9968 2.23336 2.84802C1.91052 2.68961 1.47177 2.53406 0.804162 2.29934L0.542951 2.2075C0.152181 2.07012 -0.0532184 1.64197 0.0841616 1.2512Z" fill="#909090" />
-                  <path d="M5.5 16.5C6.32843 16.5 7 17.1716 7 18C7 18.8284 6.32843 19.5 5.5 19.5C4.67157 19.5 4 18.8284 4 18C4 17.1716 4.67157 16.5 5.5 16.5Z" fill="#909090" />
-                  <path d="M14.5 16.5001C15.3284 16.5001 16 17.1716 16 18.0001C16 18.8285 15.3284 19.5001 14.5 19.5001C13.6716 19.5001 13 18.8285 13 18.0001C13 17.1716 13.6716 16.5001 14.5 16.5001Z" fill="#909090" />
-                </svg>
-                </span>Add to cart</button>
-            </div>
-          </div>
+                <div className="gadget-des space-y-3">
+                  <p className="text-[#909090]">{data.name}</p>
+                  <p className="font-black text-[#C16C4F]">{data.price}</p>
+                  <button className="flex justify-between ">
+                    <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.0841616 1.2512C0.221552 0.860438 0.649701 0.655028 1.04047 0.792418L1.34187 0.898378C1.95839 1.11511 2.48203 1.29919 2.89411 1.50139C3.33474 1.71759 3.71259 1.98393 3.99677 2.39979C4.27875 2.81243 4.39517 3.26515 4.4489 3.76153C4.47295 3.98373 4.48564 4.22967 4.49233 4.5H15.1305C16.8155 4.5 18.3323 4.5 18.7762 5.07708C19.2202 5.65417 19.0466 6.52369 18.6995 8.26275L18.1997 10.6875C17.8846 12.2164 17.727 12.9808 17.1753 13.4304C16.6236 13.88 15.8431 13.88 14.2821 13.88H8.9792C6.19028 13.88 4.79583 13.88 3.92943 12.9662C3.06302 12.0523 2.99979 11.0816 2.99979 8.14V5.53832C2.99979 4.79837 2.99877 4.30316 2.95761 3.92295C2.91828 3.5596 2.84858 3.37818 2.75832 3.24609C2.67026 3.11723 2.53659 2.9968 2.23336 2.84802C1.91052 2.68961 1.47177 2.53406 0.804162 2.29934L0.542951 2.2075C0.152181 2.07012 -0.0532184 1.64197 0.0841616 1.2512Z" fill="#909090" />
+                      <path d="M5.5 16.5C6.32843 16.5 7 17.1716 7 18C7 18.8284 6.32843 19.5 5.5 19.5C4.67157 19.5 4 18.8284 4 18C4 17.1716 4.67157 16.5 5.5 16.5Z" fill="#909090" />
+                      <path d="M14.5 16.5001C15.3284 16.5001 16 17.1716 16 18.0001C16 18.8285 15.3284 19.5001 14.5 19.5001C13.6716 19.5001 13 18.8285 13 18.0001C13 17.1716 13.6716 16.5001 14.5 16.5001Z" fill="#909090" />
+                    </svg>
+                    </span>Add to cart</button>
+                </div>
+              </div>
             );
           })}
-         
+
         </div>
 
       </section>
+      <footer className="bg-[#000000] text-white flex justify-around space-x-4 flex-col">
+        <div className="flex justify-around ">
+          <div className="space-y-4">
+            <p className='font-black'>CONTACT US</p>
+            <div className="flex space-x-2">
+              <span className="bg-white rounded-full  w-[30px] h-[30px] ">
+                <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="m-auto">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.0391C10.8121 14.0391 9.84534 13.1005 9.84534 11.947C9.84534 10.7935 10.8121 9.8548 12 9.8548C13.1879 9.8548 14.1547 10.7935 14.1547 11.947C14.1547 13.1005 13.1879 14.0391 12 14.0391ZM12 0.5L0 12.1506L1.01699 13.1381L2.66316 11.5383V24.5H9.84534V17.5261H14.1547V24.5H21.3368V11.5383L22.983 13.1381L24 12.1506L12 0.5Z" fill="#909090" />
+                </svg>
+              </span>
+              <p>888 South Avenue Street, New York</p>
+            </div>
+            <div className="flex space-x-2">
+              <span className="bg-white rounded-full w-[30px] h-[30px] ">
+                <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="m-auto">
+                  <path d="M12.5562 11.4062L12.1007 11.859C12.1007 11.859 11.0181 12.9355 8.0631 9.9972C5.10812 7.05901 6.1907 5.98257 6.1907 5.98257L6.4775 5.69738C7.1841 4.99484 7.2507 3.86691 6.6342 3.04348L5.37326 1.35908C4.61028 0.339917 3.13596 0.205287 2.26145 1.07483L0.691848 2.63552C0.258228 3.06668 -0.0323518 3.62559 0.0028882 4.24561C0.0930382 5.83182 0.810708 9.2447 4.81536 13.2266C9.0621 17.4492 13.0468 17.617 14.6763 17.4651C15.1917 17.4171 15.6399 17.1546 16.0011 16.7954L17.4217 15.383C18.3806 14.4295 18.1102 12.7949 16.8833 12.128L14.9728 11.0894C14.1672 10.6515 13.1858 10.7801 12.5562 11.4062Z" fill="#909090" />
+                </svg>
+
+              </span>
+              <div><p>(12) 3 458 7995 </p>
+                <p>(12) 3 456 7890</p></div>
+
+            </div>
+            <div className="flex space-x-2">
+              <span className="bg-white rounded-[100px] w-[30px] h-[30px] text-center">
+                <svg width="20" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="m-auto">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.76162 0.400025H19.2384C19.7647 0.400013 20.2189 0.400001 20.5949 0.425645C20.9906 0.452657 21.3865 0.512057 21.7777 0.674057C22.6597 1.03943 23.3606 1.74027 23.7259 2.62237C23.8879 3.01348 23.9473 3.40937 23.9744 3.80517C24 4.18108 24 4.63526 24 5.16164V14.8384C24 15.3647 24 15.8189 23.9744 16.1949C23.9473 16.5907 23.8879 16.9865 23.7259 17.3777C23.3606 18.2597 22.6597 18.9607 21.7777 19.3259C21.3865 19.4879 20.9906 19.5473 20.5949 19.5745C20.2189 19.6 19.7647 19.6 19.2384 19.6H4.76161C4.23523 19.6 3.78106 19.6 3.40514 19.5745C3.00935 19.5473 2.61346 19.4879 2.22234 19.3259C1.34024 18.9607 0.639408 18.2597 0.274032 17.3777C0.112032 16.9865 0.0526324 16.5907 0.0256204 16.1949C-2.35923e-05 15.8189 -1.14808e-05 15.3647 5.19201e-07 14.8384V5.16165C-1.14808e-05 4.63527 -2.35923e-05 4.18108 0.0256204 3.80517C0.0526324 3.40937 0.112032 3.01348 0.274032 2.62237C0.639408 1.74027 1.34024 1.03943 2.22234 0.674057C2.61346 0.512057 3.00935 0.452657 3.40514 0.425645C3.78106 0.400001 4.23524 0.400013 4.76162 0.400025ZM2.78094 3.13335C3.21737 2.63459 3.97548 2.58405 4.47425 3.02047L11.2098 8.91403C11.6622 9.30991 12.3378 9.30991 12.7902 8.91403L19.5258 3.02047C20.0245 2.58405 20.7827 2.63459 21.219 3.13335C21.6554 3.63212 21.6049 4.39023 21.1062 4.82664L14.3706 10.7203C13.0133 11.9079 10.9867 11.9079 9.6294 10.7203L2.89384 4.82664C2.39507 4.39023 2.34452 3.63212 2.78094 3.13335Z" fill="#909090" />
+                </svg>
+
+              </span>
+              <div><p>info@timbucloudshop.com</p>
+                <p>hr@mobel.com</p></div>
+
+            </div>
+
+          </div>
+          <div className="space-y-4">
+            <p className='font-black'>SERVICES</p>
+            <ul>
+              <li>Home Furnishing</li>
+              <li>Secure Payments</li>
+              <li>Delivery Times & Costs</li>
+              <li>Returns & Exchanges</li>
+              <li>FAQ’s</li>
+            </ul>
+
+          </div>
+          <div className="space-y-4">
+            <p className='font-black'>ACCOUNT</p>
+            <ul>
+              <li>My Account</li>
+              <li>Wishlist</li>
+              <li>Order History</li>
+              <li>Specials</li>
+              <li>Gift Vouchers</li>
+            </ul>
+
+          </div>
+          <div className="space-y-4">
+            <p className='font-black'>INFORMATION</p>
+            <ul>
+              <li>Privacy Policy</li>
+              <li>Client Portal</li>
+              <li>Product Catalogue </li>
+              <li>Quality Process</li>
+              <li>Travel Tips</li>
+            </ul>
+
+          </div>
+          <div className="space-y-4">
+            <p className='font-black'>NEWSLETTER</p>
+            <div className="space-y-3 ">
+              <p className="w-[200px]">By subscribing to our mailing list, you will always be up to date about the latest news.</p>
+              <input type="text" className="border-none p-[6px] bg-white" />
+              <p>SUBSCRIBE</p>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div className="design flex justify-between">
+          <p>Powered By HNG-11 ©️ 2024 Designed by isreal</p>
+          <div className="flex">
+            <Image src={'/img/cards-svg/american-express-svgrepo-com.svg'} width={50} height={50} />
+            <Image src={'/img/cards-svg/mastercard-svgrepo-com.svg'} width={50} height={50} />
+            <Image src={'/img/cards-svg/visa-4-logo.svg'} width={50} height={50} />
+            <Image src={'/img/cards-svg/chase-logo-svgrepo-com.svg'} width={50} height={50} className="bg-white" />
+
+
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
