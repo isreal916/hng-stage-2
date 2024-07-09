@@ -1,0 +1,8 @@
+{
+  "git.showCommitInput": true,
+  "git.optimisticUpdate": true,
+  "terminal.sourceControlRepositoriesKind": "external",
+  "terminal.integrated.tabs.defaultIcon": "folder",
+  "scm.repositories.visible": 0,
+  "git.autoRepositoryDetection": false
+}
