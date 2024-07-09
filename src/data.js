@@ -43,4 +43,48 @@ export const data =[
   }
   
 ]
+export const gadget = [
+  {
+    name:'Tablet',
+    img:'/img/tablet.png',
+    price:'$122.00'
+  },
+ 
+  {
+    name:'Macbook',
+    img:'/img/macbook.jpeg',
+    price:'$1460.00'
+  },
+  {
+    name:'Scanners',
+    img:'/img/ipad.jpg',
+    price:'$560.00'
+  },
+  {
+    name:'Tablet',
+    img:'/img/tablet.png',
+    price:'$122.00'
+  },
+  {
+    name:'Monitor',
+    img:'/img/monitor.jpg',
+    price:'$122.00'
+  },
+  {
+    name:'Console',
+    img:'/img/console.png',
+    price:'$1460.90'
+  },
 
+  {
+    name:'Desktop ',
+    img:'/img/computer.jpg',
+    price:'$560.00'
+  },
+  {
+    name:'Mice & Trackpad',
+    img:'/img/micetrack.jpg',
+    price:'$560.00'
+  },
+  
+]

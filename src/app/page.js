@@ -4,7 +4,7 @@ import couchimage from "../../public/img/couch-image-free-transparent-image-hq.p
 import sofashow from "../../public/img/sofa-show.jpg";
 import sofa from "../../public/img/sofa.png";
 import kede from "../../public/img/image.png";
-import { data } from "@/data";
+import { data,gadget } from "@/data";
 export default function Home() {
   return (
     <div className="space-y-5 ">
@@ -281,14 +281,55 @@ export default function Home() {
 
           </div>
           <div className="img3 w-[25%] bg-[url('/img/OUTDOOR.jpeg')] bg-no-repeat bg-cover  text-white flex justify-center">
-          <div className=" mt-[25px]">
-            <p className="text-[35px]">OUTDOOR</p>
-          <p className="text-[35px] font-bold">FURNITURE</p>
-          <p>Free delivery on weekends</p>
-          </div>
+            <div className=" mt-[25px]">
+              <p className="text-[35px]">OUTDOOR</p>
+              <p className="text-[35px] font-bold">FURNITURE</p>
+              <p>Free delivery on weekends</p>
+            </div>
           </div>
 
         </div>
+      </section>
+      <section className="gadget">
+        <div className="gadget-pag flex justify-between">
+          <p className="font-black">GADGETS</p>
+          <div className="pagination flex space-x-2">
+            <span className="border-2 border-solid border-[#909090] p-[3px]"><svg width="18" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.09736 2.63036C9.63037 2.09737 9.63037 1.2332 9.09736 0.700214C8.56437 0.16721 7.70022 0.16721 7.16721 0.700214L0.799494 7.06787C-0.266497 8.13393 -0.266499 9.86221 0.799494 10.9283L7.17109 17.2998C7.70408 17.8328 8.56825 17.8328 9.10124 17.2998C9.63424 16.7668 9.63424 15.9026 9.10124 15.3697L4.09775 10.3661H28.6352C29.389 10.3661 30 9.75507 30 9.00127C30 8.24762 29.389 7.63645 28.6352 7.63645H4.09122L9.09736 2.63036Z" fill="#909090" />
+            </svg>
+            </span>
+            <span className="border-2 border-solid border-[#909090] p-[3px] "><svg width="18" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.9026 15.3696C20.3696 15.9026 20.3696 16.7668 20.9026 17.2998C21.4356 17.8328 22.2998 17.8328 22.8328 17.2998L29.2005 10.9321C30.2665 9.86607 30.2665 8.13779 29.2005 7.07173L22.8289 0.700188C22.2959 0.167225 21.4318 0.167225 20.8988 0.700188C20.3658 1.23315 20.3658 2.09736 20.8988 2.63032L25.9022 7.6339H1.36482C0.611031 7.6339 0 8.24493 0 8.99872C0 9.75238 0.611031 10.3635 1.36482 10.3635H25.9088L20.9026 15.3696Z" fill="#909090" />
+            </svg>
+            </span>
+          </div>
+        </div>
+        <div className="gadget-product flex flex-wrap justify-around ">
+          {gadget.map((data) => {
+
+            return (
+              <div className="gadget-product-itm flex space-x-3 mt-[10px]" key={data.name}>
+            <div className="border-2 border-solid h-[200px] w-[160px]  "> 
+             <Image src={data.img} width={120} height={200} className="m-[20px]" />
+             </div>
+
+            <div className="gadget-des space-y-3">
+              <p className="text-[#909090]">{data.name}</p>
+              <p className="font-black text-[#C16C4F]">{data.price}</p>
+              <button className="flex justify-between ">
+                <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.0841616 1.2512C0.221552 0.860438 0.649701 0.655028 1.04047 0.792418L1.34187 0.898378C1.95839 1.11511 2.48203 1.29919 2.89411 1.50139C3.33474 1.71759 3.71259 1.98393 3.99677 2.39979C4.27875 2.81243 4.39517 3.26515 4.4489 3.76153C4.47295 3.98373 4.48564 4.22967 4.49233 4.5H15.1305C16.8155 4.5 18.3323 4.5 18.7762 5.07708C19.2202 5.65417 19.0466 6.52369 18.6995 8.26275L18.1997 10.6875C17.8846 12.2164 17.727 12.9808 17.1753 13.4304C16.6236 13.88 15.8431 13.88 14.2821 13.88H8.9792C6.19028 13.88 4.79583 13.88 3.92943 12.9662C3.06302 12.0523 2.99979 11.0816 2.99979 8.14V5.53832C2.99979 4.79837 2.99877 4.30316 2.95761 3.92295C2.91828 3.5596 2.84858 3.37818 2.75832 3.24609C2.67026 3.11723 2.53659 2.9968 2.23336 2.84802C1.91052 2.68961 1.47177 2.53406 0.804162 2.29934L0.542951 2.2075C0.152181 2.07012 -0.0532184 1.64197 0.0841616 1.2512Z" fill="#909090" />
+                  <path d="M5.5 16.5C6.32843 16.5 7 17.1716 7 18C7 18.8284 6.32843 19.5 5.5 19.5C4.67157 19.5 4 18.8284 4 18C4 17.1716 4.67157 16.5 5.5 16.5Z" fill="#909090" />
+                  <path d="M14.5 16.5001C15.3284 16.5001 16 17.1716 16 18.0001C16 18.8285 15.3284 19.5001 14.5 19.5001C13.6716 19.5001 13 18.8285 13 18.0001C13 17.1716 13.6716 16.5001 14.5 16.5001Z" fill="#909090" />
+                </svg>
+                </span>Add to cart</button>
+            </div>
+          </div>
+            );
+          })}
+         
+        </div>
+
       </section>
     </div>
   );
