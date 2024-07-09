@@ -215,23 +215,31 @@ export default function Home() {
           </ul>
         </div>
         <div className="product-data flex flex-wrap justify-around">
-        {data.map((data) => {
-           
-           return (
-            <div key={data.name} className="product-item space-y-3  ">
-            <Image src={data.img} width={270} height={200} className="border-[3px] border-solid border-[#D9D9D980] p-[5px]" />
-            <div className="product-item-desc mx-[65px]">
-              <p className="font-bold">{data.name}</p>
-              <p className="text-[#C16C4F] text-[15px] font-bold">{data.price}</p>
-            </div>
-          </div>
-           );
-         })}
-         
+          {data.map((data) => {
+
+            return (
+              <div key={data.name} className="product-item space-y-3  ">
+                <Image src={data.img} width={270} height={200} className="border-[3px] border-solid border-[#D9D9D980] p-[5px]" />
+                <div className="product-item-desc mx-[65px]">
+                  <p className="font-bold">{data.name}</p>
+                  <p className="text-[#C16C4F] text-[15px] font-bold">{data.price}</p>
+                </div>
+              </div>
+            );
+          })}
+
         </div>
 
       </section>
-      <section className="new-product"></section>
+      <section className="new-product bg-[#F0F0F0] p-[7px] content-center flex justify-around">
+        <Image src={'/image.png'} width={400} height={400}  className="self-center"/>
+        <div className="new-product-desc space-y-4">
+          <p className="font-black">NEW PRODUCT</p>
+          <h1 className="font-black text-[45px]">AXEL- STOOL</h1>
+          <p className="w-[500px]">A sleek and versatile addition to contemporary interiors. Crafted from sustainably sourced ash wood, its minimalist design exudes elegance and functionality. The AXEL Stool features a gently machined seat for optimal comfort, supported by sturdy yet slim tapered legs that provide stability without compromising on style.</p>
+          <button className="bg-[#353638] text-[#FFFFFF] p-[5px]">SHOP NOW</button>
+        </div>
+      </section>
     </div>
   );
 }
